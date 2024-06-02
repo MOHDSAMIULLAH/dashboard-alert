@@ -5,7 +5,7 @@ import { processAlertData } from "../utils/utils";
 import { Link } from "react-router-dom";
 import { TbAlertSquareRounded } from "react-icons/tb";
 
-function Home() {
+function Tables() {
   const [data, setData] = useState([]);
   const [summary, setSummary] = useState({});
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
@@ -204,25 +204,29 @@ function Home() {
             </button>
 
             <div class="flex justify-center  mt-2 mr-4">
-              <div class="relative flex w-full flex-wrap items-stretch mb-3"></div>
+              <div class="relative flex w-full flex-wrap items-stretch mb-3">
+            
+              </div>
             </div>
           </div>
         </header>
         <main>
-          <div class="grid mb-4 pb-10 px-2 sm:px-8 mx-4 rounded-3xl bg-gray-100 border-4 border-green-400">
+          <div class="grid mb-4 pb-10 px-2 sm:px-8 mx-4 rounded-3xl bg-gray-700 border-4 border-green-400">
             <div class="grid grid-cols-12 gap-6">
               <div class="grid grid-cols-12 col-span-12 gap-6 xxl:col-span-9">
                 <div class="col-span-12 mt-8">
                   <div class="flex items-center h-10 intro-y">
-                    <h2 class="mr-5 text-lg font-medium truncate">Dashboard</h2>
+                    <h2 class="mr-5 text-4xl font-medium text-white truncate">
+                      Dashboard
+                    </h2>
                   </div>
                   <div class="grid grid-cols-12 gap-6 mt-5">
-                    <a
-                      class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
-                      href="#"
+                    <div
+                      class="transform bg-black/60 to-white/5 hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y"
+                      
                     >
-                      <div class="p-5">
-                        <div class="flex justify-between">
+                      <div class="p-5 ">
+                        <div class="flex justify-between ">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-7 w-7 text-green-400"
@@ -243,23 +247,24 @@ function Home() {
                         </div>
                         <div class="ml-2 w-full flex-1">
                           <div>
-                            <div class="mt-3 text-3xl font-bold leading-8">
+                            <div class="mt-3 text-3xl text-white font-bold leading-8">
                               {summary.totalAlerts}
                             </div>
 
-                            <div class="mt-1 text-base text-gray-600">
+                            <div class="mt-1 text-base text-gray-400">
                               Total Alerts
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
-                      href="#"
+                    </div>
+                    <div
+                      class="transform bg-black/60 to-white/5 hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y"
+                      
                     >
                       <div class="p-5">
                         <div class="flex justify-between">
+                        
                           <TbAlertSquareRounded class="h-7 w-7 text-blue-400" />
                           <div class="bg-green-500 rounded-full h-6 px-2 flex justify-items-center text-white font-semibold text-sm">
                             <span class="flex items-center">
@@ -269,20 +274,20 @@ function Home() {
                         </div>
                         <div class="ml-2 w-full flex-1">
                           <div>
-                            <div class="mt-3 text-3xl font-bold leading-8">
+                            <div class="mt-3 text-3xl font-bold text-white leading-8">
                               {summary.mostFrequentCategory}
                             </div>
 
-                            <div class="mt-1 text-base text-gray-600">
+                            <div class="mt-1 text-base text-gray-400">
                               Most Frequent Category
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
-                      href="#"
+                    </div>
+                    <div
+                      class="transform bg-black/60 to-white/5 hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y"
+                     
                     >
                       <div class="p-5">
                         <div class="flex justify-between">
@@ -308,20 +313,20 @@ function Home() {
                         </div>
                         <div class="ml-2 w-full flex-1">
                           <div>
-                            <div class="mt-3 text-3xl font-bold leading-8">
+                            <div class="mt-3 text-white text-3xl font-bold leading-8">
                               {summary.mostFrequentSrcIp}
                             </div>
 
-                            <div class="mt-1 text-base text-gray-600">
+                            <div class="mt-1 text-base text-gray-400">
                               Most Frequent Source IP
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
-                      href="#"
+                    </div>
+                    <div
+                      class="transform bg-black/60 to-white/5 hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y"
+                     
                     >
                       <div class="p-5">
                         <div class="flex justify-between">
@@ -353,105 +358,108 @@ function Home() {
                         </div>
                         <div class="ml-2 w-full flex-1">
                           <div>
-                            <div class="mt-3 text-3xl font-bold leading-8">
+                            <div class="mt-3 text-3xl text-white font-bold leading-8">
                               {summary.mostTargetedPort}
                             </div>
 
-                            <div class="mt-1 text-base text-gray-600">
+                            <div class="mt-1 text-base text-gray-400">
                               Most Targeted Port
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
 
                 {/* table */}
                 <div class="col-span-12 mt-5">
                   <div class="grid gap-2 grid-cols-1 lg:grid-cols-1">
-                    <div class="bg-white p-4 shadow-lg rounded-lg">
-                      <h1 class="font-bold text-base">Alert Table</h1>
+                    <div class="bg-gray-800  p-4 shadow-lg rounded-lg">
+                      <h1 class="font-bold text-white text-base">
+                        Alert Table
+                      </h1>
                       <div class="mt-4">
                         <div class="flex flex-col">
                           <div class="-my-2 overflow-x-auto">
                             <div class="py-2 align-middle inline-block min-w-full">
-                              <div class="shadow overflow-hidden overflow-x-auto border-b border-gray-200 sm:rounded-lg bg-white">
-                                <table class="min-w-full divide-y divide-gray-200">
+                              <div class="shadow overflow-hidden overflow-x-auto border-b border-gray-200 sm:rounded-lg to-white/5 bg-black/60">
+                                <table cass="min-w-full divide-y divide-gray-200">
                                   <thead>
                                     <tr>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">Timestamp</span>
                                         </div>
                                       </th>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">Source IP</span>
                                         </div>
                                       </th>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">Source Port</span>
                                         </div>
                                       </th>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">
                                             Destination IP
                                           </span>
                                         </div>
                                       </th>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">
                                             Destination Port
                                           </span>
                                         </div>
                                       </th>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">Protocol</span>
                                         </div>
                                       </th>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">Signature</span>
                                         </div>
                                       </th>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">Category</span>
                                         </div>
                                       </th>
-                                      <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                      <th class="px-6 py-3 bg-gray-50 bg-black/60 text-xs leading-4 font-medium text-gray-50 uppercase tracking-wider">
                                         <div class="flex cursor-pointer">
                                           <span class="mr-2">Severity</span>
                                         </div>
                                       </th>
                                     </tr>
                                   </thead>
-                                  <tbody class="bg-white divide-y divide-gray-200">
+                                  <tbody class="bg-gray-900 divide-y divide-gray-500">
                                     {data &&
                                       data.map((alert, index) => (
                                         <tr key={index}>
                                           <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5">
+                                            {/* <p>Apple MacBook Pro 13</p> */}
                                             <p class="text-xs text-gray-400">
                                               {new Date(
                                                 alert.timestamp
                                               ).toLocaleString()}
                                             </p>
                                           </td>
-                                          <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5">
+                                          <td class="px-6 py-2 whitespace-no-wrap text-gray-300 text-sm leading-5">
                                             <p>{alert.src_ip}</p>
                                           </td>
-                                          <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5">
+                                          <td class="px-6 py-2 whitespace-no-wrap text-gray-300 text-sm leading-5">
                                             <p>{alert.src_port}</p>
                                           </td>
-                                          <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5">
+                                          <td class="px-6 py-2 whitespace-no-wrap text-gray-300 text-sm leading-5">
                                             <p>{alert.dest_ip}</p>
                                           </td>
-                                          <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5">
+                                          <td class="px-6 py-2 whitespace-no-wrap text-gray-300 text-sm leading-5">
                                             <p>{alert.dest_port}</p>
                                           </td>
                                           <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5">
@@ -478,7 +486,7 @@ function Home() {
                                               {alert.alert?.signature}
                                             </p>
                                           </td>
-                                          <td class="px-6 py-2 whitespace-no-wrap text-sm leading-5">
+                                          <td class="px-6 py-2 whitespace-no-wrap text-amber-500 text-sm leading-5">
                                             <p class="">
                                               {alert.alert?.category}
                                             </p>
@@ -509,4 +517,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Tables;

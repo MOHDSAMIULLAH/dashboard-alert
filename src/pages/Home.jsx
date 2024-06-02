@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { TbAlertSquareRounded } from "react-icons/tb";
-
-
 import { processAlertData } from "../utils/utils";
 import {
   LineChart,
@@ -236,18 +234,17 @@ function Home() {
           </div>
         </header>
         <main>
-          <div class="grid mb-4 pb-10 px-2 sm:px-8 mx-4 rounded-3xl bg-gray-100 border-4 border-green-400">
+          <div class="grid mb-4 pb-10 px-2 sm:px-8 mx-4 rounded-3xl bg-gray-700 border-4 border-green-400">
             <div class="grid grid-cols-12 gap-6">
               <div class="grid grid-cols-12 col-span-12 gap-6 xxl:col-span-9">
                 <div class="col-span-12 mt-8">
                   <div class="flex items-center h-10 intro-y">
-                    <h2 class="mr-5 text-lg font-medium truncate">Dashboard</h2>
+                    <h2 class="mr-5 text-4xl font-medium text-white truncate">
+                      Dashboard
+                    </h2>
                   </div>
                   <div class="grid grid-cols-12 gap-6 mt-5">
-                    <a
-                      class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
-                      href="#"
-                    >
+                    <div class="transform bg-black/60 to-white/5 hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
                       <div class="p-5">
                         <div class="flex justify-between">
                           <svg
@@ -270,21 +267,18 @@ function Home() {
                         </div>
                         <div class="ml-2 w-full flex-1">
                           <div>
-                            <div class="mt-3 text-3xl font-bold leading-8">
+                            <div class="mt-3 text-3xl text-white font-bold leading-8">
                               {summary.totalAlerts}
                             </div>
 
-                            <div class="mt-1 text-base text-gray-600">
+                            <div class="mt-1 text-base text-gray-400">
                               Total Alerts
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
-                      href="#"
-                    >
+                    </div>
+                    <div class="transform bg-black/60 to-white/5 hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
                       <div class="p-5">
                         <div class="flex justify-between">
                           <TbAlertSquareRounded class="h-7 w-7 text-blue-400" />
@@ -296,21 +290,18 @@ function Home() {
                         </div>
                         <div class="ml-2 w-full flex-1">
                           <div>
-                            <div class="mt-3 text-3xl font-bold leading-8">
+                            <div class="mt-3 text-3xl font-bold text-white leading-8">
                               {summary.mostFrequentCategory}
                             </div>
 
-                            <div class="mt-1 text-base text-gray-600">
+                            <div class="mt-1 text-base text-gray-400">
                               Most Frequent Category
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
-                      href="#"
-                    >
+                    </div>
+                    <div class="transform bg-black/60 to-white/5 hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
                       <div class="p-5">
                         <div class="flex justify-between">
                           <svg
@@ -335,21 +326,18 @@ function Home() {
                         </div>
                         <div class="ml-2 w-full flex-1">
                           <div>
-                            <div class="mt-3 text-3xl font-bold leading-8">
+                            <div class="mt-3 text-white text-3xl font-bold leading-8">
                               {summary.mostFrequentSrcIp}
                             </div>
 
-                            <div class="mt-1 text-base text-gray-600">
+                            <div class="mt-1 text-base text-gray-400">
                               Most Frequent Source IP
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
-                      href="#"
-                    >
+                    </div>
+                    <div class="transform bg-black/60 to-white/5 hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
                       <div class="p-5">
                         <div class="flex justify-between">
                           <svg
@@ -380,24 +368,24 @@ function Home() {
                         </div>
                         <div class="ml-2 w-full flex-1">
                           <div>
-                            <div class="mt-3 text-3xl font-bold leading-8">
+                            <div class="mt-3 text-white text-3xl font-bold leading-8">
                               {summary.mostTargetedPort}
                             </div>
 
-                            <div class="mt-1 text-base text-gray-600">
+                            <div class="mt-1 text-base text-gray-400">
                               Most Targeted Port
                             </div>
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
 
                 {/* line chart */}
                 <div class="col-span-12 mt-5">
                   <div class="grid grid-cols-1 ">
-                    <div class="bg-white shadow-lg p-4  rounded-lg">
+                    <div class="bg-gray-900 shadow-lg p-4  rounded-lg">
                       <ResponsiveContainer width="100%" height={300}>
                         <LineChart data={alertsOverTime}>
                           <CartesianGrid strokeDasharray="3 3" />
@@ -419,7 +407,7 @@ function Home() {
                 {/* charts */}
                 <div class="col-span-12 mt-5">
                   <div class="grid gap-2 grid-cols-1 lg:grid-cols-2">
-                    <div class="bg-white shadow-lg h-fit">
+                    <div class="bg-gray-900 shadow-lg h-fit">
                       <ResponsiveContainer width="100%" height={500}>
                         <PieChart>
                           <Pie
@@ -441,9 +429,9 @@ function Home() {
                           <Tooltip />
                         </PieChart>
                       </ResponsiveContainer>
-                       ̰{" "}
+                       ̰
                     </div>
-                    <div class="bg-white shadow-lg h-fit">
+                    <div class="bg-gray-900 shadow-lg h-fit">
                       <ResponsiveContainer width="100%" height={500}>
                         <PieChart>
                           <Pie
