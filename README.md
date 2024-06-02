@@ -5,7 +5,7 @@
 
 This is a React application for visualizing network security alerts. The dashboard displays key metrics, including the total number of alerts, the most frequent source IP, the most targeted port, and the most frequent alert category. It also features interactive charts and a table listing all alerts.
 
-## Deployed Link: 
+## Deployed Link: https://dashboard-alert.vercel.app/
 
 ## Features
 
@@ -27,9 +27,6 @@ This is a React application for visualizing network security alerts. The dashboa
 - Recharts
 - Icons from React Icons
 
-## Live Demo
-
-Check out the live demo of the application [here](https://your-deployed-link.com).
 
 ## Installation
 
@@ -37,8 +34,8 @@ To run the application locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/alert-dashboard.git
-    cd alert-dashboard
+    git clone https://github.com/MOHDSAMIULLAH/dashboard-alert.git
+    cd dashboard-alert
     ```
 
 2. Install the dependencies:
@@ -66,16 +63,8 @@ The charts provide a visual representation of alerts over time, severity distrib
 
 ## Data Processing
 
-The `processAlertData` function in `src/utils.js` processes the alert data to compute summary metrics, alerts over time, severity distribution, and category distribution.
+The `processAlertData` function in `src/utils/utils.js` processes the alert data to compute summary metrics, alerts over time, severity distribution, and category distribution.
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-Replace `"https://your-deployed-link.com"` with the actual URL where your project is deployed. You can deploy your React application using services like Vercel, Netlify, or GitHub Pages.
